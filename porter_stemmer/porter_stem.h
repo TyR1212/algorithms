@@ -10,6 +10,6 @@ using namespace std;
 #define PORTER_H
 
 //main functions
-void porterStem(vector<string>&);
+vector<string> porterStem(vector<string>);
 
 #endif

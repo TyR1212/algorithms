@@ -9,8 +9,8 @@ using namespace std;
 int main()
 {
     string words = "an experimental study of a wing in a propeller slipstream was made in order ";
-           words += "to determine the spanwise distribution of the lift increase due to slipstream at different angles of attack of the wing";
-           words += "and at different free stream to slipstream velocity ratios the results were intended in part as an evaluation basis";
+           words += "to determine the spanwise distribution of the lift increase due to slipstream at different angles of attack of the wing ";
+           words += "and at different free stream to slipstream velocity ratios the results were intended in part as an evaluation basis ";
            words += "for different theoretical treatments of this problem";
 
     string temp;
@@ -29,10 +29,10 @@ int main()
     }
 
     //call porter stemming function
-    porterStem(stringVector);
+    stringVector = porterStem(stringVector);
 
     //output results
-    for (auto word : stringVector)
+    for (const auto word : stringVector)
         cout << word << ' ';
     cout << endl;
 }

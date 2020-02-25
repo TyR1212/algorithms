@@ -13,6 +13,7 @@ int main()
 {
     vector<Point> points;               //stores the points
     vector<int> startPoints = {1, 3};   //stores id's of the starting points for clustering
+                                        //here, there are 2 startpoints meaning that there will be 2 clusters
     vector<Cluster> clusters;           //stores the clusters
     
     getSampleData(points);
@@ -27,7 +28,7 @@ int main()
         cout << "Cluster " << cluster.getClusterID() + 1 << " contains " << cluster.getNumPoints()
              << " points and the point " << cluster.getClosestPoint() << " is the closest to its centroid." << endl
              << " Assigned points: ";
-             for (auto point : points)
+             for (const auto point : points)
                 if (point.getAssigned() == cluster.getClusterID())
                     cout << point.getID() << ' ';
         cout << endl;

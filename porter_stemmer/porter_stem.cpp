@@ -23,7 +23,7 @@ bool containsVowel(string); //rule (*v*) stem word contains vowel
 bool ifCVC(string);         //rule (*o*) stem word has CVC pattern
 
 //main porter stemming function
-void porterStem(vector<string>& strVector)
+vector<string> porterStem(vector<string> strVector)
 {
     string word;   //stores current word being stemmed
 
@@ -51,6 +51,8 @@ void porterStem(vector<string>& strVector)
 
         strVector[i] = word; //apply stemming changes
     }
+
+    return strVector;        //returned stemmed words
 }
 
 //stemming Step 1a
